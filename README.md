@@ -15,10 +15,10 @@ This project is a browser extension designed to simplify test case management an
 
 ## Project Structure
 
-- **icons/**  
+- **icons**  
   Contains the logo and icons used for the extension's user interface.
 
-- **helper-functions/**  
+- **helper-functions**  
   Includes utility functions for:  
   - Fetching test cases.  
   - Executing test cases.  
