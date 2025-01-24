@@ -9,10 +9,6 @@
 - **Real-Time Progress Updates**: Provides real-time feedback on the extraction and testing process.
 - **Seamless Integration**: Integrates smoothly with VSCode, enhancing the competitive programming experience.
 
-# Project Name
-
-This project is a browser extension designed to simplify test case management and execution by integrating sample test cases from a desired URL into the extension's workflow.
-
 ## Project Structure
 
 - **icons**  
