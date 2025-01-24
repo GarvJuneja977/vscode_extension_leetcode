@@ -32,7 +32,7 @@
 - Simplified UI for managing and running tests.  
 
 ## Usage
-1. Add your icons to the `icons` folder.
+1. Add your icons to the `icons_used` folder.
 2. Update or add new utility functions in the `helper-functions-used` directory.
 3. Modify the logic for the extension in `extension.js`.
-4. Use the `final.py` script to fetch test cases and save them as needed.
+4. Use the `last.py` script to fetch test cases and save them as needed.
