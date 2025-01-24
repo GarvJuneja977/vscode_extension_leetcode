@@ -11,7 +11,6 @@ struct ListNode {
 class Solution {
 public:
     ListNode* deleteMiddle(ListNode* head) {
-        // If the list is empty or has one element
         if (!head || !head->next) {
             return nullptr;
         }
@@ -20,23 +19,19 @@ public:
         ListNode* fast = head;
         ListNode* prev = nullptr;
         
-        // Move fast pointer twice as fast and slow pointer once
         while (fast && fast->next) {
             prev = slow;
             slow = slow->next;
             fast = fast->next->next;
         }
 
-        // Now slow points to the middle node
-        // Remove it by changing the previous node's next
         prev->next = slow->next;
 
-        delete slow;  // Free the memory of the middle node
+        delete slow; 
         return head;
     }
 };
 
-// Helper functions to create and print the linked list
 ListNode* createList(std::vector<int> values) {
     if (values.empty()) return nullptr;
     ListNode* head = new ListNode(values[0]);
@@ -53,13 +48,11 @@ void printList(ListNode* head) {
         std::cout << head->val <<" ";
         head = head->next;
     }
-    //std::cout << "nullptr" << std::endl;
 }
 
 int main() {
     Solution solution;
 
-    // Example: Create a linked list 1 -> 2 -> 3 -> 4 -> 5
     vector<int> v;
     int input;
     while (std::cin >> input) {
@@ -67,19 +60,14 @@ int main() {
     }
     ListNode* head = createList(v);
     
-    // std::cout << "Original list: ";
-    // printList(head);
-    
     head = solution.deleteMiddle(head);
     
-    // std::cout << "List after deleting the middle node: ";
     printList(head);
     
-    // Cleanup the remaining nodes
     while (head) {
         ListNode* temp = head;
         head = head->next;
-        delete temp; // Free memory
+        delete temp;
     }
 
     return 0;
